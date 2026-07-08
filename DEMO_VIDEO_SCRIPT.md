@@ -1,111 +1,148 @@
-# Demo Video Script - World Cup Prediction Market
+# 🎬 Demo Video Script - World Cup Prediction Market
 
 ## Duration: 5 minutes
 
-## Opening (0:00 - 0:30)
+---
 
-**[Screen: Project Title]**
+## Scene 1: Introduction (0:00 - 0:30)
 
-"Hi, I'm Zelan Albani, and today I'll show you the World Cup Prediction Market - a fully decentralized prediction market platform built on Solana."
+**[Tunjukkan landing page]**
 
-**[Screen: Architecture Diagram]**
+"Selamat datang di World Cup Prediction Market - platform prediksi sepakbola berbasis Solana blockchain.
 
-"This project integrates TxLINE real-time sports data with Solana smart contracts to create a trustless betting platform for World Cup matches."
+Platform ini memungkinkan Anda untuk:
+- Memprediksi hasil pertandingan Piala Dunia 2026
+- Membeli dan menjual shares prediksi
+- Mendapatkan keuntungan dari prediksi yang tepat"
 
-## Part 1: Smart Contract (0:30 - 1:30)
+---
 
-**[Screen: Code Editor - lib.rs]**
+## Scene 2: Connect Wallet (0:30 - 1:00)
 
-"The smart contract is built with Anchor framework and has 5 main instructions:"
+**[Klik tombol Connect Wallet]**
 
-1. **Initialize** - Sets up the protocol state
-2. **Create Market** - Creates prediction markets for matches
-3. **Buy Shares** - Uses constant product AMM for pricing
-4. **Settle Market** - Resolves markets using TxLINE data
-5. **Claim Winnings** - Distributes USDC to winners
+"Pertama, kita hubungkan wallet Solana. Platform ini mendukung:
+- Phantom
+- Solflare
+- Dan wallet lainnya"
 
-**[Screen: AMM Formula]**
+**[Pilih Phantom, approve connection]**
 
-"We use a constant product AMM where x * y = k, ensuring fair pricing based on supply and demand."
+"Setelah terhubung, kita bisa melihat saldo dan mulai berprediksi."
 
-## Part 2: Frontend Demo (1:30 - 3:00)
+---
 
-**[Screen: Home Page]**
+## Scene 3: Browse Markets (1:00 - 2:00)
 
-"The frontend is built with Next.js 14 and TailwindCSS, featuring a dark theme optimized for sports betting."
+**[Scroll through market list]**
 
-**[Screen: Markets Page]**
+"Di halaman utama, kita bisa melihat semua pasar prediksi yang tersedia:
 
-"Here you can browse all active markets, see live scores via TxLINE SSE streaming, and check current odds."
+1. **Match Winner** - Siapa yang menang?
+2. **Total Goals** - Berapa gol yang dicetak?
+3. **First Goal** - Siapa yang mencetak gol pertama?
 
-**[Screen: Market Detail]**
+Setiap market menunjukkan:
+- Harga YES/NO saat ini
+- Total volume trading
+- Waktu tersisa"
 
-"Clicking on a market shows detailed information, live updates, and the option to buy shares."
+---
 
-**[Screen: Buy Shares Demo]**
+## Scene 4: Buy Shares (2:00 - 3:00)
 
-"Let me demonstrate buying shares. I'll select 'Brazil to Win' and purchase 100 shares. The AMM automatically adjusts the price based on current demand."
+**[Klik pada market 'Brazil vs Argentina']**
 
-**[Screen: Portfolio Page]**
+"Mari kita coba membeli shares untuk pertandingan Brazil vs Argentina.
 
-"The portfolio page tracks all your positions, showing potential winnings and current market value."
+Saat ini, harga Brazil menang adalah 0.65 SOL per share.
+Jika Brazil menang, setiap share bernilai 1 SOL.
+Keuntungan potensial: 0.35 SOL per share."
 
-## Part 3: TxLINE Integration (3:00 - 4:00)
+**[Klik Buy YES, masukkan jumlah]**
 
-**[Screen: SSE Connection]**
+"Saya akan membeli 10 shares dengan total 6.5 SOL."
 
-"TxLINE provides real-time match data through Server-Sent Events. Watch as scores update live without refreshing the page."
+**[Approve transaction di wallet]**
 
-**[Screen: Merkle Proof]**
+"Transaksi berhasil! Shares sudah masuk ke wallet kita."
 
-"For settlement, we use TxLINE's Merkle proof API to cryptographically verify match results on-chain."
+---
 
-## Part 4: Security & Trustlessness (4:00 - 4:30)
+## Scene 5: View Portfolio (3:00 - 3:30)
 
-**[Screen: PDA Accounts]**
+**[Klik tab Portfolio]**
 
-"All funds are stored in Program Derived Addresses, controlled by the smart contract - no central authority."
+"Di tab Portfolio, kita bisa melihat semua posisi kita:
 
-**[Screen: On-chain Settlement]**
+- Brazil Win: 10 shares @ 0.65 SOL
+- Total Goals Over 2.5: 5 shares @ 0.40 SOL
 
-"Settlement happens entirely on-chain using TxLINE's cryptographic proofs, ensuring fair and transparent results."
+Nilai total portfolio kita saat ini adalah 8.5 SOL."
 
-## Closing (4:30 - 5:00)
+---
 
-**[Screen: Summary]**
+## Scene 6: Settlement & Claim (3:30 - 4:30)
 
-"To summarize, we've built a fully decentralized prediction market that:"
+**[Tunjukkan market yang sudah settled]**
 
-- Uses TxLINE for real-time data
-- Implements AMM for fair pricing
-- Settles trustlessly on Solana
-- Provides instant finality
+"Setelah pertandingan selesai, market akan di-settle secara otomatis oleh oracle.
 
-**[Screen: Links]**
+Contoh: Pertandingan Brazil vs Argentina sudah selesai.
+Brazil menang 2-1!
 
-"Check out the code on GitHub and try the live demo. Thank you!"
+Market ini sekarang settled dengan hasil YES."
 
-## Recording Checklist
+**[Klik tombol Claim]**
 
-- [ ] Screen recording software ready (OBS Studio)
-- [ ] Browser with demo app running
-- [ ] Code editor with smart contract open
-- [ ] Terminal for commands
-- [ ] Microphone tested
-- [ ] Backup recording in case of issues
+"Klik tombol Claim untuk mengambil reward kita."
 
-## Tips for Recording
+**[Approve transaction]**
 
-1. **Speak clearly** and at a moderate pace
-2. **Highlight key features** as you demonstrate them
-3. **Show real interactions** - don't just talk, demo!
-4. **Keep it concise** - 5 minutes max
-5. **End with a call to action** - check GitHub, try demo
+"Reward berhasil diklaim! Kita mendapatkan 10 SOL dari investasi 6.5 SOL.
+Keuntungan: 3.5 SOL!"
 
-## Backup Plan
+---
 
-If live demo fails:
-1. Use pre-recorded clips
-2. Show screenshots instead
-3. Focus on code walkthrough
-4. Emphasize architecture and design decisions
+## Scene 7: Technical Details (4:30 - 5:00)
+
+**[Tunjukkan halaman Technical atau README]**
+
+"Platform ini dibangun dengan:
+
+**Smart Contract (Anchor/Rust):**
+- AMM untuk pricing otomatis
+- Merkle proof untuk verifikasi
+- Oracle integration untuk hasil
+
+**Frontend (Next.js 14):**
+- Real-time price updates
+- Wallet adapter integration
+- Responsive design
+
+**Security:**
+- Program audited
+- Open source di GitHub
+
+Link repository: github.com/z03009183-dot/worldcup-predict
+
+Terima kasih telah menonton! Mari berprediksi di World Cup Prediction Market!"
+
+---
+
+## 📝 Notes untuk Recording:
+
+1. **Gunakan screen recorder** (OBS Studio atau QuickTime)
+2. **Resolusi:** 1920x1080 atau 1280x720
+3. **Audio:** Rekam voiceover terpisah untuk kualitas lebih baik
+4. **Editing:** Gunakan CapCut, DaVinci Resolve, atau iMovie
+5. **Thumbnail:** Buat thumbnail menarik dengan Canva
+
+## 🎯 Key Points yang Harus Ditunjukkan:
+
+- [ ] Wallet connection
+- [ ] Market browsing
+- [ ] Buying shares (demo transaction)
+- [ ] Portfolio view
+- [ ] Settlement & claim
+- [ ] Technical architecture
